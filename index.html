@@ -179,7 +179,7 @@
             gap: 16px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 40px 24px;
         }
 
         .nav-btn-group {
@@ -191,28 +191,34 @@
         .nav-wa-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: var(--green-wa);
+            gap: 9px;
+            background: linear-gradient(135deg, #25D366 0%, #1aad52 100%);
             color: var(--white);
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            padding: 9px 20px;
+            padding: 13px 26px;
             border-radius: 100px;
-            transition: opacity var(--transition), transform var(--transition);
+            box-shadow: 0 0 16px rgba(37, 211, 102, 0.55), 0 4px 14px rgba(37, 211, 102, 0.40);
+            transition: box-shadow var(--transition), transform var(--transition);
             white-space: nowrap;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.15);
         }
 
         .nav-wa-btn:hover {
-            opacity: 0.88;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 0 28px rgba(37, 211, 102, 0.80), 0 8px 24px rgba(37, 211, 102, 0.55);
+        }
+
+        .nav-wa-btn:active {
+            transform: scale(0.97);
         }
 
         .nav-wa-btn svg {
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             fill: currentColor;
             flex-shrink: 0;
         }
@@ -220,25 +226,31 @@
         .nav-landing-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: var(--blue);
+            gap: 9px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+            color: var(--white);
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            padding: 9px 20px;
+            padding: 13px 26px;
             border-radius: 100px;
-            border: 2px solid var(--blue);
-            transition: background var(--transition), color var(--transition), transform var(--transition);
+            border: none;
+            box-shadow: 0 0 16px rgba(0, 74, 173, 0.55), 0 4px 14px rgba(0, 74, 173, 0.40);
+            transition: box-shadow var(--transition), transform var(--transition);
             white-space: nowrap;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.20);
         }
 
         .nav-landing-btn:hover {
-            background: var(--blue);
             color: var(--white);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 0 28px rgba(0, 74, 173, 0.80), 0 8px 24px rgba(0, 74, 173, 0.55);
+        }
+
+        .nav-landing-btn:active {
+            transform: scale(0.97);
         }
 
         /* ─── MOBILE LAYOUT ──────────────────────────────── */
@@ -488,24 +500,25 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 14px;
         }
 
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             width: 100%;
-            padding: 15px 20px;
-            border-radius: 12px;
-            font-family: 'Barlow', sans-serif;
-            font-size: clamp(0.88rem, 3.4vw, 0.97rem);
+            padding: 20px 28px;
+            border-radius: 16px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(1.05rem, 4.2vw, 1.2rem);
             font-weight: 700;
             text-decoration: none;
             cursor: pointer;
             border: none;
-            letter-spacing: 0.01em;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
             transition: transform var(--transition), box-shadow var(--transition), color var(--transition), background var(--transition);
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
@@ -518,16 +531,17 @@
         }
 
         .btn-whatsapp {
-            background: var(--green-wa);
+            background: linear-gradient(135deg, #25D366 0%, #1aad52 100%);
             color: #fff;
-            font-size: clamp(0.95rem, 3.6vw, 1.05rem);
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+            font-size: clamp(1.08rem, 4.4vw, 1.22rem);
+            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.50), 0 2px 0 rgba(0,0,0,0.12);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.18);
         }
 
         .btn-whatsapp:hover {
-            background: #1db954;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.50);
+            background: linear-gradient(135deg, #1fc85c 0%, #17954a 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(37, 211, 102, 0.60), 0 2px 0 rgba(0,0,0,0.12);
         }
 
         .btn-whatsapp:active {
@@ -535,9 +549,11 @@
         }
 
         .btn-landing {
-            background: transparent;
-            color: var(--blue);
-            border: 2px solid var(--blue);
+            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+            color: var(--white);
+            border: none;
+            box-shadow: 0 6px 28px rgba(0, 74, 173, 0.45), 0 2px 0 rgba(0,0,0,0.15);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.20);
             z-index: 0;
         }
 
@@ -545,32 +561,34 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: var(--blue);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s cubic-bezier(.22, 1, .36, 1);
+            background: linear-gradient(135deg, #0057cc 0%, #002f85 100%);
+            opacity: 0;
+            transition: opacity 0.28s ease;
             z-index: -1;
-            border-radius: 10px;
+            border-radius: 16px;
         }
 
         .btn-landing:hover {
             color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(0, 74, 173, 0.58), 0 2px 0 rgba(0,0,0,0.15);
         }
 
         .btn-landing:hover::before {
-            transform: scaleX(1);
+            opacity: 1;
         }
 
         .btn-landing:active {
-            background: var(--blue-light);
+            transform: scale(0.97);
         }
 
         .btn-icon {
-            font-size: 1.15rem;
+            font-size: 1.35rem;
             flex-shrink: 0;
             line-height: 1;
             display: flex;
             align-items: center;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.18));
         }
 
         /* ─── EMAIL BLOCK ────────────────────────────────── */
@@ -761,6 +779,7 @@
             /* Mostrar elementos desktop */
             .desktop-only {
                 display: flex;
+
             }
 
             .top-bar.desktop-only {
@@ -1101,9 +1120,9 @@
                     </svg>
                     Fale conosco
                 </a>
-                <a href="./index1.html" target="_blank" rel="noopener"
+                <a href="https://nyrfestas1.github.io/nyrfestas.instagram/" target="_blank" rel="noopener"
                     class="nav-landing-btn">
-                    🌐 Conheça a Nyr Festas
+                    🌽 Conheça a Linha Junina
                 </a>
             </div>
         </div>
@@ -1165,10 +1184,10 @@
                         </span>
                         Fale conosco
                     </a>
-                    <a href="./index1.html" target="_blank" rel="noopener"
+                    <a href="" target="_blank" rel="noopener"
                         class="btn btn-landing">
-                        <span class="btn-icon">🌐</span>
-                        Conheça a Nyr Festas
+                        <span class="btn-icon">🌽</span>
+                        Conheça a Linha Junina
                     </a>
                 </div>
 
@@ -1194,8 +1213,8 @@
                     <a href="tel:+551123374241" class="contact-pill">
                         <span class="pill-icon">📞</span>(11) 2337-4241
                     </a>
-                    <a href="mailto:vendas@mm88.com.br" class="contact-pill">
-                        <span class="pill-icon">✉️</span>vendas@mm88.com.br
+                    <a href="/cdn-cgi/l/email-protection#07716269636674476a6a3f3f2964686a296575" class="contact-pill">
+                        <span class="pill-icon">✉️</span><span class="__cf_email__" data-cfemail="7b0d1e151f1a083b1616434355181416551909">[email&#160;protected]</span>
                     </a>
                 </div>
 
@@ -1209,7 +1228,7 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         /* ── PAGE LOADER ── */
         window.addEventListener('load', () => {
@@ -1280,6 +1299,8 @@
                     row.style.display = 'none';
                     ok.style.display = 'block';
                 })
+               
+
                 .catch(() => {
                     btn.textContent = 'QUERO!';
                     btn.disabled = false;
